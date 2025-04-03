@@ -8,6 +8,7 @@ function Layout()
         <>
             <Navbar></Navbar>
             <Outlet></Outlet>
+            <div></div>
         </>
     )
 }
