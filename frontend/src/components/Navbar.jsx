@@ -3,25 +3,27 @@ import {Link, useLocation} from "react-router-dom";
 import "./navbar.css"
 import {useEffect, useState} from "react";
 
+
 function Navbar()
 {
-    const Navbar = () => {
-        const location = useLocation();
-        const [activePage, setActivePage] = useState(location.pathname);
+    const location = useLocation();
+    const [activePage, setActivePage] = useState(location.pathname);
 
-        useEffect(() => {
-            setActivePage(location.pathname);
-        }, [location]);
+    useEffect(() => {
+        setActivePage(location.pathname);
+    }, [location]);
 
-        const IsActive=()=>{  }
+
+    function IsActive(path) {
+        return activePage === path ? "bold": "normal" ;
     }
 
     return(
         <div className={"navbar"}>
             {pagedata.map((page)=>{
                     return(
-                       <Link to={page.path} className={"navitem"}>
-                           <div className={"nav-text"}>
+                       <Link to={page.path} className={`navitem`}>
+                           <div className={`nav-text`}>
                                {
                                    page.name
                                }
