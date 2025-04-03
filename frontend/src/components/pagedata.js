@@ -1,26 +1,32 @@
 export const pagedata=[
     {
         name:"Dashboard",
-        path:"/dashboard"
+        path:"/dashboard",
+        imagePath:""
     },
     {
         name:"Accounts",
-        path:"/accounts"
+        path:"/accounts",
+        imagePath:""
     },
     {
         name:"Expenses",
-        path:"/expenses"
+        path:"/expenses",
+        imagePath:""
     },
     {
         name:"Summary",
-        path:"/summary"
+        path:"/summary",
+        imagePath:""
     },
     {
         name: "Wallet",
-        path: "/wallet"
+        path: "/wallet",
+        imagePath:""
     },
     {
         name:"Logout",
-        path:"/logout"
+        path:"/logout",
+        imagePath:""
     }
 ]

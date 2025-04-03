@@ -4,6 +4,7 @@ import "./navbar.css"
 import {useEffect, useState} from "react";
 
 
+
 function Navbar()
 {
     const location = useLocation();
@@ -14,21 +15,22 @@ function Navbar()
     }, [location]);
 
 
-    function IsActive(path) {
-        return activePage === path ? "bold": "normal" ;
-    }
-
     return(
         <div className={"navbar"}>
             {pagedata.map((page)=>{
                     return(
-                       <Link to={page.path} className={`navitem`}>
-                           <div className={`nav-text`}>
-                               {
-                                   page.name
-                               }
-                           </div>
-                       </Link>
+                       <>
+                           <Link to={page.path} className={`navitem navitem-${activePage === page.path ? "bold": "normal"}`}>
+                               <div className={`nav-text open-sans-text`}>
+                                   <div style={{
+                                       paddingLeft:"1rem"
+                                   }}>{
+                                       page.name
+                                   }</div>
+                               </div>
+
+                           </Link>
+                       </>
                     )
                 })
             }
