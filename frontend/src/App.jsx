@@ -13,9 +13,6 @@ import {useEffect,useState} from "react";
 
 function App()
 {
-    const location=useLocation();
-    const [activepage,setActivePage]=useState(location.pathname)
-
     useEffect(()=>{
 
     },[])

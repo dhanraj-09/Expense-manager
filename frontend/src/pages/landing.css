@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.landing-nav
+{
+    display: flex;
+    gap:1.5rem;
+    box-sizing: border-box;
+    border:2px solid black;
+    height: 5rem;
+    width:100%;
+    align-items: center;
+    /*justify-content: center;*/
+    padding: 1.5rem;
+}
+.App-name
+{
+   font-size: large;
+   font-weight: 550;
+   margin: 0 1rem 0 7rem;
+}
+.login Button
+{
+        margin: 0 0 0 40rem;
+        width: 6rem;
+        padding: 0.8rem;
+        border-radius: 35px;
+}
+.Open-acc Button{
+    margin: 0 0 0 0;
+    width: 10rem;
+    padding: 0.8rem;
+    border-radius: 35px;
+    color: #fff;
+    background-color: #61cc3c;
+    border: 1px solid #61cc3c;
+}
+.cont{
+    display:flex;
+    width: 100%;
+    height: 50rem;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.half-container{
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 50%;
+    height: 100%;
+
+}
+
+
