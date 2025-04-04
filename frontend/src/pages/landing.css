@@ -8,7 +8,7 @@
     display: flex;
     gap:1.5rem;
     box-sizing: border-box;
-    border:2px solid black;
+    /*border:2px solid black;*/
     height: 5rem;
     width:100%;
     align-items: center;
@@ -17,13 +17,17 @@
 }
 .App-name
 {
-   font-size: large;
+   font-size: x-large;
    font-weight: 550;
-   margin: 0 1rem 0 7rem;
+   margin: 0 1rem 0 6rem;
+   text-shadow:0 0 1rem rgba(97, 204, 60, 0.6),
+               0 0 2rem rgba(97, 204, 60, 0.4),
+               0 0 5rem rgba(97, 204, 60, 0.5),
+               0 0 10rem rgba(97, 204, 60, 0.5);
 }
 .login Button
 {
-        margin: 0 0 0 40rem;
+        margin: 0 0 0 50rem;
         width: 6rem;
         padding: 0.8rem;
         border-radius: 35px;
@@ -41,15 +45,65 @@
     display:flex;
     width: 100%;
     height: 50rem;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     box-sizing: border-box;
+    background-color: #fafafa;
 }
 .half-container{
     box-sizing: border-box;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 50%;
     height: 100%;
-
+    display:block;
+}
+.half-container IMG{
+    height: 90%;
+    translate: 7rem 4rem;
+    width: 80%;
+}
+.shadow-text{
+    text-shadow:
+            0 0 1rem rgba(97, 204, 60, 0.4),
+            0 0 2rem rgba(97, 204, 60, 0.4),
+            0 0 5rem rgba(97, 204, 60, 0.4),
+            0 0 10rem rgba(97, 204, 60, 0.4);
+}
+.Headline{
+    font-size: 3.5rem;
+    translate: 0 3.5rem;
+    padding: 0 0 1rem 1.5rem;
+    margin: 1rem;
+}
+.app-description{
+    margin: 3.5rem 0 0 2rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+.half-container .Open-acc{
+    margin: 1.5rem 2rem 0 3.5rem;
+}
+.Open-acc .Generate-card{
+    margin: 0 0 0 2rem;
+    color: #171717;
+    background-color: white;
+    border: 1px solid black;
+}
+.three-circles IMG{
+    width: 25%;
+    translate: 3rem 3rem;
+}
+.three-circles .triangle{
+    width: 3%;
+    margin: 0 1rem 0 2rem;
+    translate: 3rem 1rem;
+}
+.app-status{
+    width: 50%;
+    translate: 17rem -0.8rem;
+    font-family: sans-serif;
+}
+.app-status H2{
+    translate: 3rem 0.2rem;
 }
 
 
