@@ -69,14 +69,14 @@
 
 .icon-total
 {
-    height: 2rem;
-    width: 2rem;
+    height: 4rem;
+    width: 4rem;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: green;
+    background-color: forestgreen;
 }
 
 .Overview
