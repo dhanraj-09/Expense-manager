@@ -96,11 +96,9 @@
     background-color:whitesmoke;
 }
 
-.open-sans-text
+.poppins-black
 {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
     font-style: normal;
-    font-variation-settings: "wdth" 100;
 }
