@@ -7,6 +7,12 @@ import {useEffect, useState} from "react";
 
 function Navbar()
 {
+    const [navopen,setNavOpen]=useState(false);
+
+    const toggleNavbar=()=>{
+        setNavOpen((prevState)=>!prevState)
+    }
+
     const location = useLocation();
     const [activePage, setActivePage] = useState(location.pathname);
 

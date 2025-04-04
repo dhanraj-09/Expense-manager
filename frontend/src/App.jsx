@@ -14,8 +14,8 @@ import {useEffect,useState} from "react";
 function App()
 {
 
-  return (
-    <>
+  return(
+    <div>
       <Router>
           <Routes>
               <Route path={"/"} element={<Landing></Landing>}></Route>
@@ -29,7 +29,7 @@ function App()
               </Route>
           </Routes>
       </Router>
-    </>
+    </div>
   )
 }
 
