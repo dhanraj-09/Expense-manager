@@ -13,14 +13,9 @@ import {useEffect,useState} from "react";
 
 function App()
 {
-    const location=useLocation();
-    const [activepage,setActivePage]=useState(location.pathname)
 
-    useEffect(()=>{
-
-    },[])
-  return (
-    <>
+  return(
+    <div>
       <Router>
           <Routes>
               <Route path={"/"} element={<Landing></Landing>}></Route>
@@ -34,7 +29,7 @@ function App()
               </Route>
           </Routes>
       </Router>
-    </>
+    </div>
   )
 }
 

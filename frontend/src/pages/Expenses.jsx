@@ -4,9 +4,11 @@
 
 function Expenses() {
 
-    return (<>
-        Expenses
-    </>)
+    return(
+        <>
+            Expenses
+        </>
+    )
 }
 
 

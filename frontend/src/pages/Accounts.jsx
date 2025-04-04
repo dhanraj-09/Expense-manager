@@ -2,14 +2,14 @@
 
 
 
-function Accounts() {
+function Accounts()
+{
 
-    return (<>
-        Accounts
-        <div>
-            hello accounts
-        </div>
-    </>)
+    return (
+        <>
+            Accounts
+        </>
+    )
 }
 
 
