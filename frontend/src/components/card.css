@@ -1,0 +1,27 @@
+.cards{
+    display: flex;
+    height: 13rem;
+    border-radius: 11px;
+    /*border: 1px solid black;*/
+    width: 22rem;
+    margin: 1rem;
+    padding: 2%;
+    background-color: #4d54e1;
+    flex-direction: column;
+}
+.cards-content{
+    display: flex;
+    gap: 6rem;
+    width: 100%;
+    margin: 0 0 5rem 0;
+    color:white;
+}
+.cards-content span{
+    color: #ffffff;
+}
+.cards-content-lower{
+    display: flex;
+    gap: 7rem;
+    width: 100%;
+    color:white;
+}
