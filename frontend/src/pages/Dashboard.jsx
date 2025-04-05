@@ -1,4 +1,6 @@
 import "./dashboard.css"
+import TransactionHistory from "../components/TransactionHistory.jsx";
+import Comparison from "../components/Comparison.jsx"
 function Dashboard()
 {
     return(
@@ -44,9 +46,9 @@ function Dashboard()
                     </div>
                     <div className={"Overview"}></div>
                 </div>
-                <div className={"block2-activity"}>
-                    <div className={"Activity"}></div>
-                    <div className={"Comparison"}></div>
+                <div className={"block2"}>
+                    <TransactionHistory></TransactionHistory>
+                    <Comparison></Comparison>
                 </div>
             </div>
         </div>

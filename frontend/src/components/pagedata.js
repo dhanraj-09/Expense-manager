@@ -10,8 +10,8 @@ export const pagedata=[
         imagePath:""
     },
     {
-        name:"Expenses",
-        path:"/expenses",
+        name:"Save my Money",
+        path:"/save-my-money",
         imagePath:""
     },
     {

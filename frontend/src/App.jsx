@@ -5,11 +5,10 @@ import Dashboard from "./pages/Dashboard.jsx";
 import Logout from "./pages/Logout.jsx";
 import Wallet from "./pages/Wallet.jsx";
 import Summary from "./pages/Summary.jsx";
-import Expenses from "./pages/Expenses.jsx";
 import Accounts from "./pages/Accounts.jsx";
 import Layout from "./components/Layout.jsx";
 import Landing from "./pages/Landing.jsx";
-import {useEffect,useState} from "react";
+import SaveMoney from "./pages/SaveMoney.jsx";
 
 function App()
 {
@@ -22,7 +21,7 @@ function App()
               <Route element={<Layout></Layout>}>
                   <Route path={"/dashboard"} element={<Dashboard></Dashboard>}></Route>
                   <Route path={"/accounts"} element={<Accounts></Accounts>}></Route>
-                  <Route path={"/expenses"} element={<Expenses></Expenses>}></Route>
+                  <Route path={"/save-my-money"} element={<SaveMoney></SaveMoney>}></Route>
                   <Route path={"/summary"} element={<Summary></Summary>}></Route>
                   <Route path={"/wallet"} element={<Wallet></Wallet>}></Route>
                   <Route path={"/logout"} element={<Logout></Logout>}></Route>
