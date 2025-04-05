@@ -72,12 +72,12 @@ dashboard = ({
 		
     })
 
-# with open("dashboard.json", "w", encoding="utf-8") as f:
-# 	json.dump(dashboard, f, indent=4)
+with open("dashboard.json", "w", encoding="utf-8") as f:
+	json.dump(dashboard, f, indent=4)
 
-@app.route('/dashboard', methods = ["GET"])
-def dashboard_values():
-	return jsonify(dashboard)
+# @app.route('/dashboard', methods = ["GET"])
+# def dashboard_values():
+# 	return jsonify(dashboard)
 
 
 
@@ -97,12 +97,14 @@ summary = {
 	"dr_sum" : total_spending
 }
 
+with open("summary.json", "w", encoding="utf-8") as f:
+	json.dump(summary, f, indent=4)
 
-@app.route('/summary', methods = ["GET"])
-def summary_values():
-	return jsonify(summary)
+# @app.route('/summary', methods = ["GET"])
+# def summary_values():
+# 	return jsonify(summary)
 
-if __name__ == "__main__":
-	app.run(debug = True,host = '0.0.0.0', port = 5000)
+# if __name__ == "__main__":
+# 	app.run(debug = True,host = '0.0.0.0', port = 5000)
 
 
