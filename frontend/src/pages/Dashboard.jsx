@@ -1,7 +1,8 @@
 import "./dashboard.css"
 import TransactionHistory from "../components/TransactionHistory.jsx";
 import Comparison from "../components/Comparison.jsx"
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {getBalance, getRecieved, getSpending} from "../api.js";
 function Dashboard()
 {
 
@@ -9,8 +10,26 @@ function Dashboard()
     const [spending,setSpending]=useState(0);
     const [recieved,setRecieved]=useState(0);
 
-
-
+    useEffect(()=>{
+        async function loadBalance()
+        {
+            let data=await getBalance();
+            setBalance(data);
+        }
+        async function loadSpending()
+        {
+            let data=await getSpending();
+            setSpending(data);
+        }
+        async function loadRecieved()
+        {
+            let data=await getRecieved();
+            setRecieved(data);
+        }
+        loadRecieved().then().catch();
+        loadBalance().then().catch();
+        loadSpending().then().catch();
+    },[]);
 
     return(
         <div className={"container"}>
