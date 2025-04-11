@@ -41,6 +41,30 @@ export async function getRecieved()
     }
 }
 
+export async function getCurrentMonth()
+{
+    try {
+        const response = await axios.get(`${URL}/currentMonth`);
+        return response.data;
+    }
+    catch (err)
+    {
+        console.error(`X Error Type ${err.name} \n ${err.message}`);
+    }
+}
+
+export async function getPreviousMonth()
+{
+    try {
+        const response = await axios.get(`${URL}/previousMonth`);
+        return response.data;
+    }
+    catch (err)
+    {
+        console.error(`X Error Type ${err.name} \n ${err.message}`);
+    }
+}
+
 
 
 

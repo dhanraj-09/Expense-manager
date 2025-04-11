@@ -47,11 +47,11 @@ postRoutes.route("/spending").get(async (req,res)=>{
 })
 
 postRoutes.route("/recieved").get(async (req,res)=>{
-    let db=database.getDb();
-    let key="total recieved"
-    let data=await db.collection("total").findOne({_id:objectID});
     try
     {
+        let db=database.getDb();
+        let key="total recieved"
+        let data=await db.collection("total").findOne({_id:objectID});
         res.json(parseFloat(data[key]));
     }
     catch (e)
@@ -59,8 +59,40 @@ postRoutes.route("/recieved").get(async (req,res)=>{
         console.error(`X Error Type ${e.name} \n ${e.message}`);
         res.status(500).json({error: e.message});
     }
-
 })
+
+postRoutes.route("/currentMonth").get(async (req,res)=>{
+   try
+   {
+       let db=database.getDb();
+       let key="current month";
+       const data=await db.collection("total").findOne({_id: objectID});
+       res.json(parseFloat(data[key]));
+   }
+   catch (e)
+   {
+       console.error(`X Error Type ${e.name} \m ${e.message}`);
+       res.status(500).json({error:e.message});
+   }
+})
+
+postRoutes.route("/previousMonth").get(async (req,res)=>{
+    try
+    {
+        let db=database.getDb();
+        let key="previous month";
+        const data=await db.collection("total").findOne({_id: objectID});
+        res.json(parseFloat(data[key]));
+    }
+    catch (e)
+    {
+        console.error(`X Error Type ${e.name} \m ${e.message}`);
+        res.status(500).json({error:e.message});
+    }
+})
+
+
+
 
 
 
