@@ -9,6 +9,7 @@ import Accounts from "./pages/Accounts.jsx";
 import Layout from "./components/Layout.jsx";
 import Landing from "./pages/Landing.jsx";
 import SaveMoney from "./pages/SaveMoney.jsx";
+import Login from "./pages/Login.jsx";
 
 function App()
 {
@@ -18,6 +19,7 @@ function App()
       <Router>
           <Routes>
               <Route path={"/"} element={<Landing></Landing>}></Route>
+              <Route path={"/login"} element={<Login></Login>}></Route>
               <Route element={<Layout></Layout>}>
                   <Route path={"/dashboard"} element={<Dashboard></Dashboard>}></Route>
                   <Route path={"/accounts"} element={<Accounts></Accounts>}></Route>
