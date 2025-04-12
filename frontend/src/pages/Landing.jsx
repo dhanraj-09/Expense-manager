@@ -3,6 +3,9 @@ import styled from "styled-components";
 import image from "../assets/Green-bou.png"
 import circles from "../assets/3-circles.jpg"
 import triangle from "../assets/Green_equilateral_triangle_point_up.svg.png"
+import { useNavigate } from "react-router-dom";
+
+
 
 const DIV=styled.div``;
 const P=styled.p``;
@@ -13,12 +16,15 @@ const SPAN=styled.span``;
 const H2=styled.h2``;
 function Landing()
 {
+    const navigate=useNavigate();
     return(
         <>
             <DIV className={"landing-nav"}>
                 <P className={"App-name"}>Expense Manager App</P>
                 <DIV className={"login"}>
-                    <BUTTON>Login</BUTTON>
+                    <BUTTON onClick={
+                        ()=>{
+                            navigate("/login")}}>Login</BUTTON>
                 </DIV>
                 <DIV className={"Open-acc"}>
                     <BUTTON>Open Account</BUTTON>

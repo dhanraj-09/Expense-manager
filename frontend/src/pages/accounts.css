@@ -1,0 +1,133 @@
+.accounts
+{
+    margin-left: 14%;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+.accounts-nav
+{
+    background-color: white;
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    width: 100%;
+    height: 10%;
+    box-sizing: border-box;
+}
+.accounts-nav h1{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 3%;
+}
+.accounts__cards{
+    display: flex;
+    height: 30%;
+    /*border:1px solid black;*/
+    align-items: center;
+    padding: 0.5rem;
+    box-sizing: border-box;
+
+}
+.add-acc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    translate: 0 -5%;
+    margin: 2rem;
+    font-size: 2rem;
+}
+.add-acc:hover{
+    cursor: pointer;
+}
+.account-summary{
+    display: flex;
+    width: 100%;
+    height:60%;
+}
+.acc-graph{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+}
+.half-header{
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: 10%;
+    margin: 0 5% 0 5%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: .5rem;
+    font-size: 1.4rem;
+}
+.funds{
+    display: flex;
+
+}
+.graph-shown{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height:83%;
+    margin: 2% 5% 0 5%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    background-color: #FFF;
+}
+.acc-transaction{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+}
+.half-header2{
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: 10%;
+    margin: 0 5% 0 5%;
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+    padding: .5rem;
+    font-size: 1.4rem;
+    gap: 10rem
+}
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #333;
+
+    padding: 0.5rem 0;
+    outline: none;
+}
+
+input[type="date"]:focus {
+    border-color: #333;
+}
+.trans-shown{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height:83%;
+    margin: 2% 5% 0 5%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    background-color: #FFF;
+}

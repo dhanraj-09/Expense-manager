@@ -1,8 +1,36 @@
 import "./dashboard.css"
 import TransactionHistory from "../components/TransactionHistory.jsx";
 import Comparison from "../components/Comparison.jsx"
+import {useEffect, useState} from "react";
+import {getBalance, getRecieved, getSpending} from "../api.js";
 function Dashboard()
 {
+
+    const [balance,setBalance]=useState(0);
+    const [spending,setSpending]=useState(0);
+    const [recieved,setRecieved]=useState(0);
+
+    useEffect(()=>{
+        async function loadBalance()
+        {
+            let data=await getBalance();
+            setBalance(data);
+        }
+        async function loadSpending()
+        {
+            let data=await getSpending();
+            setSpending(data);
+        }
+        async function loadRecieved()
+        {
+            let data=await getRecieved();
+            setRecieved(data);
+        }
+        loadRecieved().then().catch();
+        loadBalance().then().catch();
+        loadSpending().then().catch();
+    },[]);
+
     return(
         <div className={"container"}>
             <div className={"dashboard"}>
@@ -19,7 +47,7 @@ function Dashboard()
                                 </svg>
                             </div>
                             <div className={"total-text poppins-black"}>Total Balance</div>
-                            <div className={"total-amount poppins-black"}>$3140</div>
+                            <div className={"total-amount poppins-black"}>{balance}</div>
                         </div>
                         <div className={"total-spending total"}>
                             <div className={"icon-total"}>
@@ -30,7 +58,7 @@ function Dashboard()
                                 </svg>
                             </div>
                             <div className={"total-text poppins-black"}>Total Spending</div>
-                            <div className={"total-amount poppins-black"}>$100</div>
+                            <div className={"total-amount poppins-black"}>{spending}</div>
                         </div>
                         <div className={"total-saved total"}>
                             <div className={"icon-total"}>
@@ -41,7 +69,7 @@ function Dashboard()
                                     </svg>
                             </div>
                             <div className={"total-text poppins-black"}>Total Received</div>
-                            <div className={"total-amount poppins-black"}>$3040</div>
+                            <div className={"total-amount poppins-black"}>{recieved}</div>
                         </div>
                     </div>
                     <div className={"Overview"}></div>

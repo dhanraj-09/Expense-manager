@@ -9,7 +9,7 @@
 import pdfplumber
 import csv
 
-file_path  = "6statement.pdf"
+file_path  = "statement.pdf"
 
 out_path = "output.csv"
 

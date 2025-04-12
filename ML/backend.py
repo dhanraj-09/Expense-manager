@@ -51,6 +51,7 @@ daily_sum_dict = daily_sum.to_dict(orient = "records")
 
 
 
+
 # with open("mainahibatarahahu.json", "w", encoding="utf-8") as f:
 # 	json.dump(tran_hist, f, indent=4)
 
@@ -76,35 +77,26 @@ with open("dashboard.json", "w", encoding="utf-8") as f:
 	json.dump(dashboard, f, indent=4)
 
 # @app.route('/dashboard', methods = ["GET"])
-# def dashboard_values():
-# 	return jsonify(dashboard)
+# def values():
+# 	return jsonify({
+# 		"total balance" : total_balance,
+# 		"total spending" : total_spending,
+# 		"total recieved" : total_recieved,
+# 		"current month" : curr_month,
+# 		"previous month" : prev_month,
+# 		"transaction history" : tran_hist,
+# 		"monthly summary" : monthly_sum,
+# 		"daily summary" : daily_sum
+		
+#     })
 
-
-
-
-cr_info = df[df["CR"] != 0][["Date", "CR"]].reset_index(drop=True)
-cr_info["Date"] = cr_info["Date"].astype(str)
-cr_info_dict = cr_info.to_dict(orient = 'records')
-
-dr_info = df[df["DR"] != 0][["Date", "DR"]].reset_index(drop=True)
-dr_info["Date"] = dr_info["Date"].astype(str)
-dr_info_dict = dr_info.to_dict(orient = 'records')
-
-summary = {
-	"dr_info" : dr_info_dict,
-	"cr_info" : cr_info_dict,
-	"cr_sum" : total_recieved,
-	"dr_sum" : total_spending
-}
-
-with open("summary.json", "w", encoding="utf-8") as f:
-	json.dump(summary, f, indent=4)
-
-# @app.route('/summary', methods = ["GET"])
-# def summary_values():
-# 	return jsonify(summary)
 
 # if __name__ == "__main__":
 # 	app.run(debug = True,host = '0.0.0.0', port = 5000)
+
+
+
+
+
 
 
